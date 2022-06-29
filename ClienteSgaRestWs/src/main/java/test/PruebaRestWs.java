@@ -18,7 +18,7 @@ public class PruebaRestWs {
         
         Client client = ClientBuilder.newClient(clientConfig);
         
-        WebTarget webTarget = client.target("http://localhost:8080/sga-jee-web-RS/webservice").path("/personas");
+        WebTarget webTarget = client.target("http://localhost:8080/sga-jee-web_cliente_web/webservice").path("/personas");
         //Proporcinando un id de persona e particular
         Persona persona = webTarget.path("/1").request(MediaType.APPLICATION_XML).get(Persona.class);
         System.out.println("Persona Recuperada: " + persona);
